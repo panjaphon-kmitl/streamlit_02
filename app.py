@@ -3,6 +3,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+st.set_page_config(layout='wide')
+
 st.markdown('สวัสดี! *Streamlit*')
 st.title('Layout and Decoration')
 st.write("""
@@ -15,7 +17,9 @@ df2 = pd.DataFrame(
 )
 df2.columns = ['tree_count']
 
-col1,col2,col3 = st.columns(3)
+st.divider()
+
+col1,col2,col3 = st.tabs(["Line", "Bar", "Area"])
 with col1:
     st.write('Column1')
     st.line_chart(df2)
