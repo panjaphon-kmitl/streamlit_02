@@ -18,15 +18,28 @@ df2 = pd.DataFrame(
 df2.columns = ['tree_count']
 
 st.divider()
+#
+# col1,col2,col3 = st.columns(3)
+# with col1:
+#     st.write('Column1')
+#     st.line_chart(df2)
+# with col2:
+#     st.write('Column2')
+#     st.bar_chart(df2)
+# with col3:
+#     st.write('Column3')
+#     st.area_chart(df2)
+#
+# st.divider()
 
-col1,col2,col3 = st.tabs(["Line", "Bar", "Area"])
-with col1:
+tab1,tab2,tab3 = st.tabs(["Line", "Bar", "Area"])
+with tab1:
     st.write('Column1')
     st.line_chart(df2)
-with col2:
+with tab2:
     st.write('Column2')
     st.bar_chart(df2)
-with col3:
+with tab3:
     st.write('Column3')
     st.area_chart(df2)
 
