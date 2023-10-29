@@ -2,8 +2,18 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from st_pages import Page, show_pages
 
 st.set_page_config(layout='wide')
+
+# ----- Pages -----
+show_pages(
+    [
+        Page('app.py', 'Home'),
+        Page('pages/tab.py', 'Tab Layout'),
+        Page('pages/map.py', 'Map')
+    ]
+)
 
 # ----- Intro -----
 st.markdown('สวัสดี! *Streamlit*')
@@ -63,3 +73,10 @@ st.divider()
 st.caption('กราฟแสดงจำนวนต้นไม้ จัดกลุ่มตามเส้นผ่าศูนย์กลาง')
 st.title('แปรผล')
 st.write('ส่วนใหญ่ของต้นไม้ใน SF มีเส้นผ่าศูนย์กลาง 3\' (2,721 ต้น)')
+
+# ----- Final Project -----
+# 1. โจทย์ Python เน้นอธิบาย อาจารย์จะอ่านคอนเม้น คล้าย 25 ข้อ ไม่ซีเรียสเรื่อง Technical Terms
+# 2. Streamlit, ML 2 อัน เช่น SVM and Naive Baynes, ทำผ่าน streamlit คล้าย ๆ อัน Penguin
+# 2.1. Algorithm อะไร
+# 2.2. Dataset อะไร
+# --> 2.1, 2.2 อาจารย์จะกำหนดให้
